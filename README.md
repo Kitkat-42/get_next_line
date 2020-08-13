@@ -1,5 +1,3 @@
-# get_next_line
-
 Get Next Line (8.13~)
 
 목표: line을 file descriptor로부터 읽어 줄바꿈과 함께 리턴하는 함수를 만든다.
@@ -34,4 +32,8 @@ Buffer size는 평가자와 moulinette에 의해 수정될 수 있다.
 ! 파일/redirection/표준 입력 등에서 읽어오는 테스트를 해본 후 제출한다.
 	표준 입력에 newline을 전달하면 어떻게 작동하는가? CTRL-D를 하면 어떻게 작동하는가?
 
--
+- 
+
+
+
+
