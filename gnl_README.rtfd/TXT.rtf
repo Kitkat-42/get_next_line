@@ -1,8 +1,9 @@
 {\rtf1\ansi\ansicpg949\cocoartf2513
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset129 AppleSDGothicNeo-Regular;\f2\froman\fcharset0 Times-Roman;
-}
-{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
-{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset129 AppleSDGothicNeo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red26\green27\blue29;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c13333\c14118\c14902;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
 \paperw11900\paperh16840\margl1440\margr1440\vieww11760\viewh19580\viewkind0
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 
@@ -17,7 +18,7 @@
 \
 <Mandatory part>\
 \
-\'c7\'d4\'bc\'f6 \'c0\'cc\'b8\'a7		get_next_line\
+\'c7\'d4\'bc\'f6 \'c0\'cc\'b8\'a7	get_next_line\
 \'c7\'c1\'b7\'ce\'c5\'e4\'c5\'b8\'c0\'d4	int	get_next_line(int fd, char **line);\
 \'c1\'a6\'c3\'e2\'c7\'d2 \'c6\'c4\'c0\'cf	get_next_line.c, get_next_line_utils.c, get_next_line.h\
 \'c6\'c4\'b6\'f3\'b9\'cc\'c5\'cd		#1. \'c0\'d0\'be\'ee\'bf\'c3 \'c6\'c4\'c0\'cf \'b5\'f0\'bd\'ba\'c5\'a9\'b8\'b3\'c5\'cd\
@@ -44,10 +45,25 @@ Buffer size\'b4\'c2 \'c6\'f2\'b0\'a1\'c0\'da\'bf\'cd moulinette\'bf\'a1 \'c0\'c7
 ! \'c6\'c4\'c0\'cf/redirection/\'c7\'a5\'c1\'d8 \'c0\'d4\'b7\'c2 \'b5\'ee\'bf\'a1\'bc\'ad \'c0\'d0\'be\'ee\'bf\'c0\'b4\'c2 \'c5\'d7\'bd\'ba\'c6\'ae\'b8\'a6 \'c7\'d8\'ba\'bb \'c8\'c4 \'c1\'a6\'c3\'e2\'c7\'d1\'b4\'d9.\
 	\'c7\'a5\'c1\'d8 \'c0\'d4\'b7\'c2\'bf\'a1 newline\'c0\'bb \'c0\'fc\'b4\'de\'c7\'cf\'b8\'e9 \'be\'ee\'b6\'bb\'b0\'d4 \'c0\'db\'b5\'bf\'c7\'cf\'b4\'c2\'b0\'a1? CTRL-D\'b8\'a6 \'c7\'cf\'b8\'e9 \'be\'ee\'b6\'bb\'b0\'d4 \'c0\'db\'b5\'bf\'c7\'cf\'b4\'c2\'b0\'a1?\
 \
-- \
+* CTRL-D : \'c0\'d4\'b7\'c2 \'c1\'be\'b7\'e1(EOF)\
+\
+- global variable(\'c0\'fc\'bf\'aa \'ba\'af\'bc\'f6) \'bb\'e7\'bf\'eb \'b1\'dd\'c1\'f6\
+\
+\
+<Bonus part>\
+\
+\pard\pardeftab720\partightenfactor0
+\cf3 \'c0\'cc \'c6\'c4\'c6\'ae\'b8\'a6 \'c0\'a7\'c7\'d1 all 3 initial files with _bonus\'b8\'a6 \'c1\'a6\'c3\'e2\'c7\'cf\'bc\'bc\'bf\'e4.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0\cf3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Single static variable\'b7\'ce get_next_line \'bc\'ba\'b0\'f8\'c7\'cf\'b4\'c2 \'b0\'cd.\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+get_next_line\'c0\'bb \'bb\'e7\'bf\'eb\'c7\'cf\'bf\'a9 \'b4\'d9\'c1\'df file descriptor\'b8\'a6 \'b0\'fc\'b8\'ae \'c7\'d2 \'bc\'f6 \'c0\'d6\'b4\'c2 \'b0\'cd.\uc0\u8232 \'bf\'b9\'b8\'a6 \'b5\'e9\'be\'ee, file descriptor 3, 4, 5\'b0\'a1 \'c0\'d0\'c0\'bb \'bc\'f6 \'c0\'d6\'b4\'c2 \'b0\'e6\'bf\'ec, get_next_line\'c0\'ba 3\'bf\'a1\'bc\'ad \'c7\'d1 \'b9\'f8, 4\'bf\'a1\'bc\'ad \'c7\'d1 \'b9\'f8, \'b4\'d9\'bd\'c3 3\'bf\'a1 \'bc\'ad \'c7\'d1 \'b9\'f8, 5\'bf\'a1\'bc\'ad \'c7\'d1 \'b9\'f8 \'c8\'a3\'c3\'e2\'c7\'d2 \'bc\'f6 \'c0\'d6\'bd\'c0\'b4\'cf\'b4\'d9. \'b0\'a2 descriptor\'c0\'c7 reading thread\'b8\'a6 \'c0\'d2\'c1\'f6 \'be\'ca\'c0\'b8\'b8\'e9\'bc\'ad \'b8\'bb\'c0\'cc\'c1\'d2.\
+\pard\tx566\pardeftab720\partightenfactor0
+\cf3 \
 \
 \
 \
-
-\f2 \
+\
+\
 }
